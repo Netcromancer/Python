@@ -7,20 +7,32 @@ import requests
 import urllib.request
 import urllib.error
 import json
-#Function to collect and convert UPC codes into items.
-print ("Enter item")
-item = input()
-ready_item = item + '/'
+
+#Variables
 api_key = '219860C974FF6AB2CDE9B1E152807F04'
 address = 'https://api.upcdatabase.org/product/'
-combined = address + ready_item + api_key
-print(combined)
 
-opener = urllib.request.build_opener()
-f = opener.open(combined)
-json = json.loads(f.read())
-print(json)
-print(json['title'])
+#Function to collect and convert UPC codes into items.
+def upc():
+	print ("Enter item")
+	item = input()
+	return item
+
+def url(item):	
+	ready_item = item + '/'
+	combined = address + ready_item + api_key
+	return combined
+
+def request(combined):
+	opener = urllib.request.build_opener()
+	f = opener.open(combined)
+	json = json.loads(f.read())
+	print(json)
+	print(json['title'])
+
+
+request(url(upc()))
+
 #output = requests.get(combined)
 #print(output)
 
