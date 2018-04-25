@@ -9,7 +9,7 @@ import urllib.error
 import json
 
 #Variables
-#Need to register at https://api.upcdatabase.org/product and obtain API Key.
+#Need to register at https://api.upcdatabase.org and obtain API Key.
 api_key = <API_KEY>
 address = 'https://api.upcdatabase.org'
 #Function to collect and convert UPC codes into items.
