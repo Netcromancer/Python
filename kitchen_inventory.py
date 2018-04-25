@@ -11,7 +11,7 @@ import json
 #Variables
 #Need to register at https://api.upcdatabase.org/product and obtain API Key.
 api_key = <API_KEY>
-address = 'https://api.upcdatabase.org/product/'
+address = 'https://api.upcdatabase.org'
 #Function to collect and convert UPC codes into items.
 def upc():
 	print ("Enter item")
